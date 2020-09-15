@@ -17,7 +17,7 @@ tmp$observations %>%
   mutate(id = runif(length(`2020-08-01`))) %>% 
   gather(date, emission, -id) %>% 
   filter(emission == "1") %>% 
-  mutate(amount = rlnorm(length(emission), 4, 1),
+  mutate(amount = round(rlnorm(length(emission), 4, 1)),
          day = sample(1:28, length(emission), replace = TRUE),
          date = as.Date(date) + lubridate::days(day)) %>% 
   select(id, date, amount)

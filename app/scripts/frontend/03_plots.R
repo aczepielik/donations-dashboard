@@ -65,7 +65,7 @@ plotDonationsGlobalByState <- function(data, session, name){
     collect() %>%
     ungroup() %>% 
     mutate(state = factor(state,
-                          levels = c("new", "dormant", "occasional", "active"),
+                          levels = c("new", "dormant", "occasional", "regular"),
                           labels = state_labels)) %>% 
     mutate(text = as.character(glue::glue("{formatBY(month)} \n Suma wpłat: {donations} zł"))) %>%
     ggplot(aes(month, donations, color = state, text = text, group = 1)) + 
@@ -86,7 +86,7 @@ plotDonorsGlobalByState <- function(data, session, name){
     collect() %>% 
     mutate(donors = as.integer(donors)) %>% 
     mutate(state = factor(state,
-                          levels = c("new", "dormant", "occasional", "active"),
+                          levels = c("new", "dormant", "occasional", "regular"),
                           labels = state_labels)) %>% 
     mutate(text = as.character(glue::glue("{formatBY(month)} \n Liczba darczyńców: {donors}"))) %>%
     ggplot(aes(month, donors, color = state, text = text, group = 1)) + 
