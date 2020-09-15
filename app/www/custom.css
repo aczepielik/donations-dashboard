@@ -1,0 +1,63 @@
+.small-box {
+    margin-bottom: 10px;
+    min-height: 96px;
+}
+
+.bg-navy {
+  background-color: #222d32 !important;
+}
+
+.small-box h3 {
+  font-size: 32px;
+  padding-right: 5px;
+  margin: 0 0 5px 0;
+}
+
+.small-box p {
+  font-size: 13px;
+  margin: 0 0 5px 0;
+}
+
+.col-sm-2,
+.col-sm-3,
+.col-sm-4,
+.col-sm-5 {
+  padding-right: 8px;
+  padding-left: 8px;
+}
+
+.center-column-box-container .small-box {
+    margin-bottom: 5px;
+    min-height: 0;
+    max-height: 68px;
+}
+
+.center-column-box-container div:nth-child(1) .inner {
+  padding: 15px;
+}
+
+.center-column-box-container div:nth-child(2) .inner,
+.center-column-box-container div:nth-child(3) .inner {
+    padding: 10px 10px 5px 10px;
+}
+
+.center-column-box-container div:nth-child(2) .inner h3,
+.center-column-box-container div:nth-child(3) .inner h3{
+    font-size: 22px !important; 
+}
+
+.center-column-box-container div:nth-child(2) .inner p,
+.center-column-box-container div:nth-child(3) .inner p{
+    font-size: 14px !important; 
+}
+
+.table-condensed > tbody > tr > td,
+.table-condensed > tbody > tr > th,
+.table-condensed > tfoot > tr > td,
+.table-condensed > tfoot > tr > th,
+.table-condensed > thead > tr > td,
+.table-condensed > thead > tr > th {
+    padding: 2px;
+    font-size: 13px;
+}
+

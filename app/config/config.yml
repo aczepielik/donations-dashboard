@@ -1,0 +1,28 @@
+default:
+  db_name: "postgres"
+  db_host: "postgres"
+  db_port: 5432
+  db_user: "postgres"
+  db_password: "postgres"
+
+preliminary:
+  db_name: "postgres"
+  db_host: "postgres"
+  db_port: 5432
+  db_user: "data_provider"
+  db_password: "password2"
+  
+dashboard:
+  db_name: "postgres"
+  db_host: "postgres"
+  db_port: 5432
+  db_user: "dashboard_agent"
+  db_password: "password1"
+
+local:
+  db_name: "postgres"
+  db_host: "localhost"
+  db_port: 5432
+  db_user: "postgres"
+  db_password: "postgres"
+  

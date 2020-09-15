@@ -1,0 +1,27 @@
+proxy:
+  port: 8080
+  authentication: simple
+  admin-groups: admins
+  landing_page: /app_direct/01_donations
+  users:
+  - name: stary
+    password: password
+    groups: admins
+  - name: kosma
+    password: password
+  - name: damian
+    password: password
+  docker:
+      internal-networking: true
+  specs:
+  - id: 01_donations
+    hide-navbar: true
+    display-name: Darowizny
+    description: Analiza struktury darowizn
+    container-cmd: ["R", "-e", "shiny::runApp('/root/app', port = 3838, host = '0.0.0.0')"]
+    container-image: aczepielik/donations:latest
+    container-network: donationsbridge
+
+logging:
+  file:
+    shinyproxy.log
